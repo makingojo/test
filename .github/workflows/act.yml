@@ -1,15 +1,6 @@
 name: Act
 on: push
 jobs:
-  act:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Install Deps
-        run: npm ci
-      - name: Build Max
-        run: npm run build
   lint:
     runs-on: ubuntu-latest
     steps:
@@ -19,3 +10,13 @@ jobs:
         run: npm ci
       - name: Lint Max
         run: npm run lint
+  act:
+    needs: [lint]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Deps
+        run: npm ci
+      - name: Build Max
+        run: npm run build
