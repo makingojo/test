@@ -28,6 +28,6 @@ jobs:
         run: npm run build
   secret:
     runs-on: ubuntu-latest
-     steps:  
+    steps:
       - name: Print secret
         run: echo ${{secrets.TEST}}
