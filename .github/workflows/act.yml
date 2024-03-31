@@ -1,8 +1,8 @@
 name: Act
 on: push
-  jobs:
-    act:
-      runs-on: ubuntu-latest
+jobs:
+  act:
+    runs-on: ubuntu-latest
       steps:
         - name: Checkout
           uses: actions/checkout@v3
