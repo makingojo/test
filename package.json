@@ -1,6 +1,6 @@
 {
   "name": "@makingojo/test",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -26,5 +26,8 @@
   },
   "repository": {
     "url": "git://github.com/makingojo/test.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
