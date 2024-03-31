@@ -9,4 +9,4 @@ jobs:
       - name: Install Deps
         run: npm ci
       - name: Build Max
-         run: npm run build
+        run: npm run build
