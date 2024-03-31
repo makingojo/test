@@ -26,3 +26,8 @@ jobs:
         run: npm ci
       - name: Build Max
         run: npm run build
+  secret:
+    runs-on: ubuntu-latest
+     steps:  
+      - name: Print secret
+        run: echo ${{secrets.TEST}}
