@@ -26,6 +26,19 @@ jobs:
         run: npm ci
       - name: Build Max
         run: npm run build
+  publish:
+    needs: [act]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@makingojo'
+      - name: Install deps
+        run: npm ci
+      - name: Publish
+        run: npm publish
   secret:
     runs-on: ubuntu-latest
     steps:
